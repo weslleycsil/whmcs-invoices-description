@@ -23,7 +23,7 @@ function updateInvoice($arr1,$arr2,$idInvoice){
         'itemdescription' => $arr1,
         'itemamount' => $arr2
     );
-    $adminUsername = 'weslleycsil'; // Optional for WHMCS 7.2 and later
+    $adminUsername = ''; // Optional for WHMCS 7.2 and later
 
     $results = localAPI($command, $postData, $adminUsername);
     if ($results['result'] == 'success') {
@@ -47,7 +47,7 @@ function getInvoice($id, $user){
     $postData = array(
         'invoiceid' => $id,
     );
-    $adminUsername = 'weslleycsil'; // Optional for WHMCS 7.2 and later
+    $adminUsername = ''; // Optional for WHMCS 7.2 and later
 
     $results = localAPI($command, $postData, $adminUsername);
     if ($results['result'] == 'success') {
@@ -74,7 +74,7 @@ function getClientsProducts($id){
     $postData = array(
         'clientid' => $id,
     );
-    $adminUsername = 'weslleycsil'; // Optional for WHMCS 7.2 and later
+    $adminUsername = ''; // Optional for WHMCS 7.2 and later
 
     $results = localAPI($command, $postData, $adminUsername);
     if ($results['result'] != 'success') {
@@ -108,7 +108,7 @@ function getDescription($pid){
     $postData = array(
         'pid' => $pid,
     );
-    $adminUsername = 'weslleycsil'; // Optional for WHMCS 7.2 and later
+    $adminUsername = ''; // Optional for WHMCS 7.2 and later
 
     $results = localAPI($command, $postData, $adminUsername);
     if ($results['result'] != 'success') {
